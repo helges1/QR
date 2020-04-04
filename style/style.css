@@ -5,3 +5,13 @@
 		input:focus, textarea:focus, select:focus{
 			outline: none;
 		}
+
+
+
+        @media only screen and (max-width: 850px) {
+            #qrcode {
+              width: 200px;
+              height: 200px;
+            }
+          }
+          
