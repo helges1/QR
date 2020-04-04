@@ -2,8 +2,8 @@
 
 
 	var qrcode = new QRCode(document.getElementById("qrcode"), {
-		width : 1000,
-		height : 1000,
+		width : 200,
+		height : 200,
 	
 	});
     
