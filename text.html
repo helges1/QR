@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="manifest" href="manifest.json">
+	<meta charset="UTF-8">
+	<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#333333">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gagogi QR Code Generator</title>
+	<script src="jquery.min.js"></script>
+	<script src="qrcode.js"></script>
+	<link rel="stylesheet" href="reset.css">
+	<script src="validate.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+	<style>
+
+*{
+	font-family: 'Lato', sans-serif;
+}
+
+		input:focus, textarea:focus, select:focus{
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+<noscript style="padding: 5px; background-color: #b95050; ">
+
+	<p>We're sorry, but Gagogi QR Code Generator doesn't work properly without JavaScript
+		enabled.</p>
+	<p>Please activate JavaScript, and try to reload the page.</p>
+
+</noscript>
+<div style="background-color: #333333;">
+
+	<nav style="padding-top:10px; padding-left:10px;">
+	<span><img style="width: 45px; height: 45px; border-radius: 5px; float: left;" src="android-icon-96x96.png" alt="logo"></span>	
+	<span style="max-width: 100px; padding-left: 20px; padding-top: 10px; color:#f0f0f0; float: left;"><span style="cursor:pointer;  background-color: #454545; border-radius: 25px; padding:5px 10px 5px 10px; "><i class="fas fa-link"></i> URL</span></span> 
+	<span style="max-width: 100px; padding-left: 20px; padding-top: 10px; color:#333333; float: left;"><span style="cursor:pointer;  background-color: #f0f0f0; border-radius: 25px; padding:5px 10px 5px 10px; "><i class="fas fa-font"></i> Text</span></span> 
+	</nav>
+<br><br>
+	<div style="padding: 4%;" align="center">
+	<textarea  id="text" type="text" value="" placeholder="Please insert text" style=" border:none; border-radius:5px; padding: 8px; width:100%; max-width: 650px; color:#f0f0f0; background-color: #555555;" ></textarea><br>
+<br> <div id="scriptBox" onkeypress="return runScript(event)"  style="background-color: #6ebd84; max-width: 100px; padding: 5px; color:#333333; border-radius: 25px; cursor:pointer;">Generate</div> 
+
+</div></div>
+<br><br>
+
+	<div style="padding-left:15%; padding-right:15%; padding-bottom: 15%;" align="center" id="qrcode"></div>
+<br><br>
+
+	<script>
+
+//Add this later
+//function addhttp($url) {
+//if (!preg_match("~^(?:f|ht)tps?://~i", $url)) {
+//$url = "http://" . $url;
+//}
+//return $url;
+//}
+
+
+function runScript(e) {
+    //See notes about 'which' and 'key'
+    if (e.keyCode == 13) {
+        var tb = document.getElementById("scriptBox");
+        eval(tb.value);
+        return false;
+    }
+}
+
+	var qrcode = new QRCode(document.getElementById("qrcode"), {
+		width : 200,
+		height : 200,
+	
+	});
+	
+	function makeCode () {		
+		var elText = document.getElementById("text");
+		
+		if (!elText.value) {
+			
+			elText.focus();
+			return;
+		}
+		
+		qrcode.makeCode(elText.value);
+	}
+	
+	makeCode();
+	
+	$("#text").
+		on("blur", function () {
+			makeCode();
+		}).
+		on("keydown", function (e) {
+			if (e.keyCode == 13) {
+				makeCode();
+			}
+		});
+
+		if('serviceWorker' in navigator){
+	navigator.serviceWorker.register('/sw.js')
+	  .then(reg => console.log('service worker registered'))
+	  .catch(err => console.log('service worker not registered', err));
+  }
+	</script>
+
+
+
+</body>
+</html>
