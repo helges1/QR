@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	
-	
 	<link rel="manifest" href="manifest.json">
 	<meta charset="UTF-8">
 	<link rel="apple-touch-icon" sizes="57x57" href="assets/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="assets/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="assets/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="assets/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="assets/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="assets/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="assets/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="assets/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="assets/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-<link rel="manifest" href="manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="assets/ms-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="assets/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="assets/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="assets/ms-icon-144x144.png">
 	<meta name="theme-color" content="#333333">
 	<meta name="viewport" content="width=device-width">
 	<title>Gagogi QR Code Generator</title>
@@ -28,53 +26,62 @@
 	<script src="script/qrcode.js"></script>
 	<link rel="stylesheet" href="style/reset.css">
 	<link rel="stylesheet" href="style/style.css">
-	<script
-	src="https://code.jquery.com/jquery-3.4.1.min.js"
-	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-	crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 
 
 </head>
+
 <body>
-<noscript style="padding: 5px; background-color: #b95050; ">
+	<noscript style="margin: 5px; background-color: #b95050; ">
 
-	<p>We're sorry, but Gagogi QR Code Generator doesn't work properly without JavaScript
-		enabled.</p>
-	<p>Please activate JavaScript, and try to reload the page.</p>
+		<p>We're sorry, but Gagogi QR Code Generator doesn't work properly without JavaScript
+			enabled.</p>
+		<p>Please activate JavaScript, and try to reload the page.</p>
+		</noscript> <div style="background-color: #333333;">
 
-</noscript>
-<div style="background-color: #333333;">
+			<nav style="padding-top:10px; padding-left:10px;">
+				<span><img style="width: 45px; height: 45px; border-radius: 5px; float: left;"
+						src="assets/android-icon-96x96.png" alt="logo"></span>
+				<button
+					style=" color:#333333; float: left; cursor:pointer;  background-color: #f0f0f0; border-radius: 25px; padding:5px 10px 5px 10px; margin-left: 15px; margin-top: 5px; border: none;"><i
+						class="fas fa-link"></i> URL</button>
+				<button
+					style=" color:#f0f0f0; float: left; cursor:pointer;  background-color: #454545; border-radius: 25px; padding:5px 10px 5px 10px; margin-left: 15px; margin-top: 5px; border: none;"><i
+						class="fas fa-font"></i> Text</button></b>
+			</nav>
+			<br><br>
+			<div style="padding: 4%;" align="center">
+				<input id="text" type="url" value="" placeholder="Please insert an URL"
+					style=" border:none; border-radius:5px; padding: 8px; width:100%; max-width: 650px; color:#f0f0f0; background-color: #555555;"><br>
+				<br> <button id="scriptBox" onkeypress="return runScript(event)"
+					style="background-color: #6ebd84; max-width: 100px; color:#333333; padding:5px 10px 5px 10px; border-radius: 25px; cursor:pointer; border: none;">Generate</button>
 
-	<nav style="padding-top:10px; padding-left:10px;">
-	<span><img style="width: 45px; height: 45px; border-radius: 5px; float: left;" src="assets/android-icon-96x96.png" alt="logo"></span>	
-	<span style="max-width: 100px; padding-left: 20px; padding-top: 10px; color:#333333; float: left;"><span style="cursor:pointer;  background-color: #f0f0f0; border-radius: 25px; padding:5px 10px 5px 10px; "><i class="fas fa-link"></i> URL</span></span> 
-	<span style="max-width: 100px; padding-left: 20px; padding-top: 10px; color:#f0f0f0; float: left;"><span style="cursor:pointer;  background-color: #454545; border-radius: 25px; padding:5px 10px 5px 10px; "><i class="fas fa-font"></i> Text</span></span> 
-	</nav>
-<br><br>
-	<div style="padding: 4%;" align="center">
-	<input  id="text" type="text" value="" placeholder="Please insert an URL" style=" border:none; border-radius:5px; padding: 8px; width:100%; max-width: 650px; color:#f0f0f0; background-color: #555555;" ><br>
-<br> <div id="scriptBox" onkeypress="return runScript(event)"  style="background-color: #6ebd84; max-width: 100px; padding: 5px; color:#333333; border-radius: 25px; cursor:pointer;">Generate</div> 
+			</div>
+			</div>
+			<br><br>
 
-</div></div>
-<br><br>
+			<div align="center">
+				<div style="max-width: 250px; max-height: 250px;">
+					<div id="qrcode"></div>
+				</div>
+				<br><br>
 
-	<div align="center"><div style="max-width: 250px !important; max-height: 250px !important;"  id="qrcode"></div></div>
-<br><br>
+				
 
-<script src="script/url.js"></script>
-
-<script src="script/qr.js"></script>
-
-	<script>
-		if('serviceWorker' in navigator){
-	navigator.serviceWorker.register('/sw.js')
-	  .then(reg => console.log('service worker registered'))
-	  .catch(err => console.log('service worker not registered', err));
-  }
-	</script>
+				<script src="script/qr.js"></script>
+				<script src="script/url.js"></script>
+				<script>
+					if ('serviceWorker' in navigator) {
+						navigator.serviceWorker.register('/sw.js')
+							.then(reg => console.log('service worker registered'))
+							.catch(err => console.log('service worker not registered', err));
+					}
+				</script>
 
 
 
 </body>
+
 </html>
