@@ -41,59 +41,64 @@
 		<p>We're sorry, but Gagogi QR Code Generator doesn't work properly without JavaScript
 			enabled.</p>
 		<p>Please activate JavaScript, and try to reload the page.</p>
-		</noscript> 
-		<a class="skip-main" href="#text">Skip Navigation</a>
-		
-		<div style="background-color: #333333;">
+	</noscript>
+	<a class="skip-main" href="#text">Skip Navigation</a>
 
-			<div class="scrollmenu">
-				<span class="t" tabindex="-1">
+	<div style="background-color: #333333;">
+
+		<div class="scrollmenu">
+			<span class="t" tabindex="-1">
 				<a class="active" href="#home"><i class="fas fa-link"></i> URL</a>
-			 	</span>
-				<a href="#news"><i class="fas fa-font"></i> Text</a>
-				<span class="t" tabindex="-1"></span>
-				<a href="#contact"><i class="fas fa-phone-alt"></i> Telephone Number</a>
 			</span>
-				<a href="#about"><i class="far fa-address-book"></i> Contact</a>
-				<a href="#contact"><i class="fas fa-sms"></i> SMS</a>
-				<a href="#contact"><i class="fas fa-calendar-day"></i> Event</a>
-				<a href="#support"><i class="fas fa-envelope"></i> E-mail</a>
-				<a href="#blog"><i class="fas fa-wifi"></i> WIFI</a>
-				
-			  </div>
+			<a href="#news"><i class="fas fa-font"></i> Text</a>
+			<span class="t" tabindex="-1"></span>
+			<a href="#contact"><i class="fas fa-phone-alt"></i> Telephone Number</a>
+			</span>
+			<a href="#about"><i class="far fa-address-book"></i> Contact</a>
+			<a href="#contact"><i class="fas fa-sms"></i> SMS</a>
+			<a href="#contact"><i class="fas fa-calendar-day"></i> Event</a>
+			<a href="#support"><i class="fas fa-envelope"></i> E-mail</a>
+			<a href="#blog"><i class="fas fa-wifi"></i> WIFI</a>
+
+		</div>
 
 
-			 
-			<div style="padding: 4%;" align="center" >
 
-				<label for="text" style="color: #f0f0f0;">Enter URL:</label><br>
-
-				<input tabindex="-1" id="text" type="url" value="" 
-					style=" border:none; border-radius:5px; padding: 8px; color:#f0f0f0; width:100%; max-width: 650px; background-color: #555555;"><br>
-				<br> <button id="scriptBox" onkeypress="return runScript(event)"
-					style="background-color: #6ebd84; max-width: 100px; color:#333333; padding:5px 10px 5px 10px; border-radius: 25px; cursor:pointer; border: none;">Generate</button>
-
+		<div style="padding: 4%;" align="center" style="">
+			<div style="width:100%; max-width: 650px; ">
+				<div align="left">
+			<label id="skip" for="text" style="color: #f0f0f0; margin-bottom: 5px;">Enter URL:</label>
+		</div>
+			<input tabindex="-1" id="text" type="url" value=""
+				style=" border:none; border-radius:5px; padding: 8px; color:#f0f0f0; width:100%; max-width: 650px;  background-color: #555555;"><br>
+			<br> 
+			
+			
 			</div>
-			</div>
-			<br><br>
+			<button id="scriptBox" onkeypress="return runScript(event)"
+				style="background-color: #6ebd84; max-width: 100px; color:#333333; padding:5px 10px 5px 10px; border-radius: 25px; cursor:pointer; border: none;">Generate</button>
 
-			<div align="center">
+		</div>
+	</div>
+	<br><br>
 
-					<div id="qrcode"></div>
-				</div>
-				<br><br>
+	<div align="center">
 
-				
+		<div id="qrcode"></div>
+	</div>
+	<br><br>
 
-				<script src="script/qr-url.js"></script>
 
-				<script>
-					if ('serviceWorker' in navigator) {
-						navigator.serviceWorker.register('/sw.js')
-							.then(reg => console.log('service worker registered'))
-							.catch(err => console.log('service worker not registered', err));
-					}
-				</script>
+
+	<script src="script/qr-url.js"></script>
+
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/sw.js')
+				.then(reg => console.log('service worker registered'))
+				.catch(err => console.log('service worker not registered', err));
+		}
+	</script>
 
 
 
