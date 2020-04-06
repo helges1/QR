@@ -29,32 +29,47 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+	<script src="focus.js"></script>
 
 
 </head>
 
 <body>
+
 	<noscript style="margin: 5px; background-color: #b95050; ">
 
 		<p>We're sorry, but Gagogi QR Code Generator doesn't work properly without JavaScript
 			enabled.</p>
 		<p>Please activate JavaScript, and try to reload the page.</p>
-		</noscript> <div style="background-color: #333333;">
+		</noscript> 
+		<a class="skip-main" href="#text">Skip Navigation</a>
+		
+		<div style="background-color: #333333;">
 
-			<nav style="padding-top:10px; padding-left:10px;">
-				<span><img style="width: 45px; height: 45px; border-radius: 5px; float: left;"
-						src="assets/android-icon-96x96.png" alt="logo"></span>
-				<button
-					style=" color:#333333; float: left; cursor:pointer;  background-color: #f0f0f0; border-radius: 25px; padding:5px 10px 5px 10px; margin-left: 15px; margin-top: 5px; border: none;"><i
-						class="fas fa-link"></i> URL</button>
-				<button
-					style=" color:#f0f0f0; float: left; cursor:pointer;  background-color: #454545; border-radius: 25px; padding:5px 10px 5px 10px; margin-left: 15px; margin-top: 5px; border: none;"><i
-						class="fas fa-font"></i> Text</button></b>
-			</nav>
-			<br><br>
-			<div style="padding: 4%;" align="center">
-				<input id="text" type="url" value="" placeholder="Please insert an URL"
-					style=" border:none; border-radius:5px; padding: 8px; width:100%; max-width: 650px; color:#f0f0f0; background-color: #555555;"><br>
+			<div class="scrollmenu">
+				<span class="t" tabindex="-1">
+				<a class="active" href="#home"><i class="fas fa-link"></i> URL</a>
+			 	</span>
+				<a href="#news"><i class="fas fa-font"></i> Text</a>
+				<span class="t" tabindex="-1"></span>
+				<a href="#contact"><i class="fas fa-phone-alt"></i> Telephone Number</a>
+			</span>
+				<a href="#about"><i class="far fa-address-book"></i> Contact</a>
+				<a href="#contact"><i class="fas fa-sms"></i> SMS</a>
+				<a href="#contact"><i class="fas fa-calendar-day"></i> Event</a>
+				<a href="#support"><i class="fas fa-envelope"></i> E-mail</a>
+				<a href="#blog"><i class="fas fa-wifi"></i> WIFI</a>
+				
+			  </div>
+
+
+			 
+			<div style="padding: 4%;" align="center" >
+
+				<label for="text" style="color: #f0f0f0;">Enter URL:</label><br>
+
+				<input tabindex="-1" id="text" type="url" value="" 
+					style=" border:none; border-radius:5px; padding: 8px; color:#f0f0f0; width:100%; max-width: 650px; background-color: #555555;"><br>
 				<br> <button id="scriptBox" onkeypress="return runScript(event)"
 					style="background-color: #6ebd84; max-width: 100px; color:#333333; padding:5px 10px 5px 10px; border-radius: 25px; cursor:pointer; border: none;">Generate</button>
 
@@ -63,7 +78,7 @@
 			<br><br>
 
 			<div align="center">
-				<div style="max-width: 250px; max-height: 250px;">
+
 					<div id="qrcode"></div>
 				</div>
 				<br><br>
