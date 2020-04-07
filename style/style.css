@@ -23,6 +23,13 @@ a.skip-main:focus, a.skip-main:active {
     z-index:999;
 }
 
+@media screen and (min-width: 800px) {
+    div.hideMe {
+      display: none;
+    }
+  }
+
+  #hideMe{background:#007cbb; width:100%; margin:0 auto; color:#f0f0f0; padding:10px; text-align:center;}
 
 * {
 	font-family: 'Lato', sans-serif;
@@ -81,6 +88,3 @@ a.skip-main:focus, a.skip-main:active {
 
           }
 
-
-
-          #hideMe{background:#007cbb; width:100%; margin:0 auto; color:#f0f0f0; padding:10px; text-align:center;}
