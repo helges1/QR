@@ -27,9 +27,12 @@ a.skip-main:focus, a.skip-main:active {
     div.hideMe {
       display: none;
     }
-  }
 
+  }
+ 
   #hideMe{background:#333333; width:100%; margin:0 auto; color:#f0f0f0; padding:10px; text-align:center;}
+
+
 
 * {
 	font-family: 'Lato', sans-serif;
@@ -88,3 +91,31 @@ a.skip-main:focus, a.skip-main:active {
 
           }
 
+.inputqr {
+    border:none; border-radius:5px; padding: 8px; color:#f0f0f0; width:100%; max-width: 650px;  background-color: #555555;
+}
+
+.inputqr:focus {
+    color:#333333; background-color: #f0f0f0;
+}
+
+.inputqr:hover {
+    color:#333333; background-color: #f0f0f0;
+}
+
+
+#scriptBox {
+    background-color: #6ebd84; max-width: 100px; color:#333333; padding:5px 10px 5px 10px; border-radius: 25px; cursor:pointer; border: none;
+}
+
+#scriptBox:focus {
+    background-color: #017787; color: #f0f0f0; 
+}
+
+#scriptBox:hover {
+    background-color: #017787; color: #f0f0f0; 
+}
+
+#scriptBox:active {
+    background-color: #6ebd84; color: #333333; 
+}
