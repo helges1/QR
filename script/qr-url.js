@@ -4,7 +4,8 @@
 
 
 	var qrcode = new QRCode(document.getElementById("qrcode"), {
-		width : 250,
+        
+        width : 250,
         height : 250,
 
         
@@ -50,6 +51,7 @@
             
         });
     });
+
 
 
 

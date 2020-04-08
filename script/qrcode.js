@@ -671,6 +671,10 @@ var QRCode;
 			function t() {
 				this._elImage.src = this._elCanvas.toDataURL("image/png"), this._elImage.style.display = "block", this._elCanvas.style.display = "none"
 			}
+
+		
+		  
+
 			if (this._android && this._android <= 2.1) {
 				var e = 1 / window.devicePixelRatio,
 					r = CanvasRenderingContext2D.prototype.drawImage;
@@ -795,9 +799,6 @@ $(document).ready(function(){
   })
   
 });
-
-
-
 
 
 
