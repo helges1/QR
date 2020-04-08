@@ -86,14 +86,27 @@
 
 <div style="width: 250px; height: 250px;" id="qrcode"></div>
 <br>
-		<button class="download"">
-			Download PNG
-			</button>
+
+- <a id="qrdown" href="" onclick="myFunction()" download="GagogiQR">Download PNG</a> - 
+
 	</div>
 
 
+
+
+
+	<script>
+
+document.getElementById("qrdown").onclick = function() {
+	var x = document.querySelector('[id="qrcode"] img').src;
+    document.getElementById("qrdown").href= x; 
+
+  };
+
+
+		</script>
 	<br>
-	
+
 	<br>
 
 
