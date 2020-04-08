@@ -119,3 +119,23 @@ a.skip-main:focus, a.skip-main:active {
 #scriptBox:active {
     background-color: #6ebd84; color: #333333; 
 }
+
+.download {
+    background-color: #333333 ;
+    color: #f0f0f0 !important;
+    border-radius: 25px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.download:hover {
+    background-color: #777;
+    border-radius: 25px;
+    color: #f0f0f0 !important;
+}
+
+.download:focus {
+    background-color: #777;
+    border-radius: 25px;
+    color: #f0f0f0 !important;
+}
