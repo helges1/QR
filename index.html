@@ -29,7 +29,6 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
-	<script src="focus.js"></script>
 
 
 </head>
@@ -84,16 +83,16 @@
 
 	<div align="center">
 
-<div style="width: 250px; height: 250px;" id="qrcode"></div>
+<div style="width: 200px; height: 200px;" id="qrcode"></div>
 <br>
 
-- <a id="qrdown" href="#" onclick="myFunction()" download="GagogiQR.png">Download PNG</a> - 
+<a class="download" id="qrdown" href="https://google.com" >Download PNG</a> 
 <script>
 
 	document.getElementById("qrdown").onclick = function() {
 		var x = document.querySelector('[id="qrcode"] img').src;
 		document.getElementById("qrdown").href= x; 
-	
+		
 	  };
 	
 	
