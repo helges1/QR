@@ -17,7 +17,7 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileColor" content="#f0f0f0">
 	<meta name="msapplication-TileImage" content="assets/ms-icon-144x144.png">
 	<meta name="theme-color" content="#333333">
 	<meta name="viewport" content="width=device-width">
@@ -42,15 +42,16 @@
 		<div align="center" style="width: 100%;">
 			<noscript style="background-color:#b95050; width:100%; color:#f0f0f0; padding:10px;">
 
-		We're sorry, but Gagogi QR Code Generator doesn't work properly without JavaScript
-			enabled.
-		
-	</noscript>
-</div>
-		<div align="center" class="hideMe" id='hideMe'>Swipe for more options <i class="fas fa-angle-double-right"></i></div>
-		<div class="scrollmenu">
+				We're sorry, but Gagogi QR Code Generator doesn't work properly without JavaScript
+				enabled.
 
-				<a class="active" href="#home"><i class="fas fa-link"></i> URL</a>
+			</noscript>
+		</div>
+		<div align="center" class="hideMe" id='hideMe'>Swipe menu for more options <i
+				class="fas fa-angle-double-right"></i></div>
+		<div id="gagogi" class="scrollmenu">
+
+			<a class="active" href="#home"><i class="fas fa-link"></i> URL</a>
 			<a href="#news"><i class="fas fa-font"></i> Text</a>
 			<a href="#contact"><i class="fas fa-phone-alt"></i> Telephone Number</a>
 			<a href="#about"><i class="far fa-address-book"></i> Contact</a>
@@ -58,24 +59,22 @@
 			<a href="#contact"><i class="fas fa-calendar-day"></i> Event</a>
 			<a href="#support"><i class="fas fa-envelope"></i> E-mail</a>
 			<a href="#blog"><i class="fas fa-wifi"></i> WIFI</a>
-			
+
 		</div>
 
 
 
-		<div style="padding: 4%;" align="center" >
+		<div style="padding: 4%;" align="center">
 			<div style="width:100%; max-width: 650px; ">
 				<div align="left">
-			<label id="skip" for="text" style="color: #f0f0f0; margin-bottom: 5px;">Enter URL:</label>
-		</div>
-			<input id="text" type="url" value=""
-				style=" border:none; border-radius:5px; padding: 8px; color:#f0f0f0; width:100%; max-width: 650px;  background-color: #555555;"><br>
-			<br> 
-			
-			
+					<label id="skip" for="text" style="color: #f0f0f0; ">Enter URL:</label>
+				</div>
+				<input class="inputqr" id="text" type="url" value=""><br>
+				<br>
+
+
 			</div>
-			<button id="scriptBox" onkeypress="return runScript(event)"
-				style="background-color: #6ebd84; max-width: 100px; color:#333333; padding:5px 10px 5px 10px; border-radius: 25px; cursor:pointer; border: none;">Generate</button>
+			<button id="scriptBox" onkeypress="return runScript(event)">Generate</button>
 
 		</div>
 	</div>
@@ -85,9 +84,17 @@
 
 	<div align="center">
 
-		<div id="qrcode"></div>
+<div style="width: 250px; height: 250px;" id="qrcode"></div>
+<br>
+		<button class="download"">
+			Download PNG
+			</button>
 	</div>
-	<br><br>
+
+
+	<br>
+	
+	<br>
 
 
 
